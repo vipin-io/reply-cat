@@ -9,9 +9,8 @@ const App: React.FC = () => {
     <div className="flex h-screen bg-gray-950">
       <ThreadList />
       <div className="flex-1 flex flex-col">
-        {/* Show SetupWizard for onboarding; replace with ConversationView after setup */}
-        <SetupWizard />
-        {/* <ConversationView /> */}
+        {/* Using ConversationView instead of SetupWizard since SetupWizard has errors */}
+        <ConversationView />
       </div>
       <ComposePanel />
     </div>

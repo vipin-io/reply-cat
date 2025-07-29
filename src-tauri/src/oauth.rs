@@ -5,6 +5,7 @@ use urlencoding::encode;
 use rand::{distributions::Alphanumeric, Rng};
 use reqwest::blocking::Client;
 use serde::{Deserialize, Serialize};
+use base64::{Engine, engine::general_purpose};
 use crate::keychain;
 
 const CLIENT_ID: &str = "YOUR_CLIENT_ID.apps.googleusercontent.com";
@@ -28,7 +29,7 @@ fn gen_code_verifier() -> String {
 fn code_challenge(verifier: &str) -> String {
     use sha2::{Digest, Sha256};
     let hash = Sha256::digest(verifier.as_bytes());
-    base64::encode_config(hash, base64::URL_SAFE_NO_PAD)
+    general_purpose::URL_SAFE_NO_PAD.encode(hash)
 }
 
 pub fn start_oauth_flow() -> Result<(), String> {

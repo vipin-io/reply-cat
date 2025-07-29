@@ -1,4 +1,4 @@
-import { invoke } from '@tauri-apps/api/tauri';
+import { invoke } from '@tauri-apps/api/core';
 
 export async function checkRAM(): Promise<{ ok: boolean; totalGB: number }> {
   // Calls a Tauri command to get total RAM in GB

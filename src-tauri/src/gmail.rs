@@ -1,6 +1,7 @@
 use reqwest::blocking::Client;
 use serde_json::json;
 use serde::{Deserialize, Serialize};
+use base64::{Engine, engine::general_purpose};
 use crate::oauth;
 
 const GMAIL_API: &str = "https://gmail.googleapis.com/gmail/v1/users/me";
@@ -73,9 +74,8 @@ pub fn gmail_insert_draft(
         "--boundary42\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\n{}\r\n--boundary42\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n{}\r\n--boundary42--",
         body_text, body_html
     );
-    let raw = base64::encode_config(
-        format!("{}\r\n\r\n{}", headers.join("\r\n"), quoted),
-        base64::URL_SAFE_NO_PAD,
+    let raw = general_purpose::URL_SAFE_NO_PAD.encode(
+        format!("{}\r\n\r\n{}", headers.join("\r\n"), quoted)
     );
     let msg = json!({
         "message": {
