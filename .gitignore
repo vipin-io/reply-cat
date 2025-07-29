@@ -1,8 +1,9 @@
 # Dependencies
-/node_modules
-/.pnp
+node_modules/
+node_modules/**/*
+.pnp
 .pnp.js
-/vendor
+vendor/
 
 # Testing
 /coverage
