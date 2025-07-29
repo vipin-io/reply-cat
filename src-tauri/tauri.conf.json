@@ -1,20 +1,32 @@
 {
-  "package": {
-    "productName": "MailCloak",
-    "version": "0.1.0"
+  "identifier": "com.replycat.desktop",
+  "productName": "ReplyCat",
+  "version": "0.1.0",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173"
   },
-  "tauri": {
-    "bundle": {
-      "identifier": "com.replycat.desktop",
-      "icon": ["icons/icon.png"],
-      "copyright": "MIT"
-    },
+  "app": {
     "windows": [
       {
-        "title": "MailCloak",
+        "title": "ReplyCat",
         "width": 1200,
-        "height": 800
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false
       }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.png"
     ]
   }
-} 
+}
