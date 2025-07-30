@@ -4,22 +4,22 @@
 
 ---
 
-## 🚀 Why ReplyCat?
+## Why ReplyCat?
 
 Most email assistants either:
 - Auto-blast replies (like **LAMBDA**) with little control, or
 - Require training on your inbox (like **Panza**), slowing you down.
 
-**ReplyCat is different:**
-- ⚡️ Instant setup—no training or archive scraping
-- 💬 One-click TL;DR + 3 AI reply options
-- 🔐 100% local inference using Ollama (Phi-3 / Zephyr)
-- 🛡️ Gmail tokens stored in OS keychain (never touch frontend)
-- 🌐 Works via a browser extension calling your local headless app
+** ReplyCat is different:**
+-  Instant setup—no training or archive scraping
+-  One-click TL;DR + 3 AI reply options
+-  100% local inference using Ollama (Phi-3 / Zephyr)
+-  Gmail tokens stored in OS keychain (never touch frontend)
+-  Works via a browser extension calling your local headless app
 
 ---
 
-## 🔍 What Users Actually Want (from Reddit)
+## What Users Actually Want (from Reddit)
 
 > “I feel that is the thing I primarily need rather than AI-generated emails.”  
 → ReplyCat starts with TL;DR, not blind drafts.
@@ -32,7 +32,7 @@ Most email assistants either:
 
 ---
 
-## 🛠️ V1 Core Features
+## V1 Core Features
 
 - Setup Wizard: RAM check → Ollama install → Model fetch → Gmail login
 - Thread viewer: Recent Gmail threads
@@ -44,7 +44,7 @@ Most email assistants either:
 
 ---
 
-## 🔄 Roadmap
+## Roadmap
 
 - Chrome MV3 extension for Gmail overlay
 - Auto-fallback model for low-RAM systems
@@ -54,7 +54,7 @@ Most email assistants either:
 
 ---
 
-## 🧠 Built With
+## Built With
 
 - **Tauri** (Rust backend)
 - **React + Tailwind** (Frontend)
@@ -63,7 +63,7 @@ Most email assistants either:
 
 ---
 
-## 📦 Local, Private, Fast
+## Local, Private, Fast
 
 ReplyCat never sends your email to the cloud.  
 No OpenAI, no Anthropic, no logging.  
@@ -71,7 +71,7 @@ It’s your inbox. Let’s keep it that way.
 
 ---
 
-## 👋 Contributing
+## Contributing
 
 We’re open to contributions—especially around UI polish, extension injection, and low-RAM optimizations. Check `CONTRIBUTING.md` or raise an issue.
 
